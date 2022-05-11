@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bai5.2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bài TH 5.2"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:background="@color/purple_200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_hoten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào họ tên"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/bai5.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào số điện thoại"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_hoten"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_sdt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_luu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lưu"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_email"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_capnhat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_email"
+        app:layout_constraintStart_toEndOf="@id/btn_luu"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_xoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xóa"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_email"
+        app:layout_constraintStart_toEndOf="@id/btn_capnhat"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_timkiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tìm kiếm"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_email"
+        app:layout_constraintStart_toEndOf="@id/btn_xoa"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_hienthi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_xoa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
