@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/MSV"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nhập mã sinh viên"
+        android:inputType="number"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/HoTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Nhập họ và tên"
+        android:inputType="textPersonName"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MSV" />
+
+    <EditText
+        android:id="@+id/SoTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Nhập số tín chỉ"
+        android:inputType="number"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/HoTen" />
+
+    <RadioGroup
+        android:padding="10dp"
+        android:id="@+id/RadioG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/SoTC"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" >
+
+        <RadioButton
+            android:id="@+id/tc101"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="101"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/tc102"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="102"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/tc103"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="103"
+            android:textSize="20sp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnThem"
+        android:layout_width="119dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:text="Thêm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RadioG" />
+
+    <Button
+        android:id="@+id/btnXoa"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
+
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Xóa"
+
+        app:layout_constraintLeft_toRightOf="@id/btnThem"
+        app:layout_constraintTop_toBottomOf="@id/RadioG" />
+
+    <Button
+        android:id="@+id/btnTim"
+        android:layout_width="105dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="12dp"
+        android:text="Tìm Kiếm"
+        app:layout_constraintLeft_toRightOf="@id/btnXoa"
+        app:layout_constraintTop_toBottomOf="@id/RadioG" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnThem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/listview"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/listview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/listview1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
